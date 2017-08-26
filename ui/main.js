@@ -1,29 +1,28 @@
 //counter code
-var button = document.getElementById('counter');
+var button = document.getElementById("counter");
+button.oncLick = function() {
 
- button.onclick=function(){
+//Create A Request To Counter Endpoint
+var request = new XMLhttpRequest();
+//Capture The Response And Store In HTML
+request.onreadystatechange = function() {
+if (request.readyState === XMLHttpRequest.DONE) 
+{
+//Take Some Action
+if (httpRequest.status === 200) 
+{ 
+var counter= request.responseText; 
+var span = document.getElementById("count");
+span.innerHTML = counter.toString();
+} 
+else { alert('There was a problem with the request.'); }
 
-//create a request object
-    var request= new XMLHttpRequest();
-    //capture the response  and store it in a variable
-    request.onreadystatechange = function(){
-       if(request.readyState===XMLHttpRequest.DONE){
-            //take some action
-          if (request.status===200){
-             var counter= request.responseText;
-             var span = document.getElementById('count');
-             span.innerHTML = counter.toString();
-          }  
-       }
-        //not done yet
-       };
-    //render the variable in the correct span
-   
-//make the request
-    request.open('GET','http://shubhamshekhar089.imad.hasura-app.io/',true);
-    request.send(null);
+  }
 };
-
+//Make A Request
+request.open('GET', 'http://kogam22.imad.hasura-app.io/counter', true);
+request.send(null);
+};
 
 
 
