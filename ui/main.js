@@ -10,19 +10,17 @@ if (request.readyState === XMLHttpRequest.DONE)
 {
 //Take Some Action
 if (request.status === 200) 
-{ 
+ { 
 var counter= request.responseText; 
 var span = document.getElementById('count');
 span.innerHTML = counter.toString();
-}
-
+   }
   }
 };
 //Make A Request
 request.open('GET', 'http://shubhamshekhar089.imad.hasura-app.io/counter', true);
 request.send(null);
 };
-
 //submit name
 var nameInput = document.getElementById('name');
 var name = nameInput.value;
