@@ -9,7 +9,7 @@ request.onreadystatechange = function() {
 if (request.readyState === XMLHttpRequest.DONE) 
 {
 //Take Some Action
-if (httpRequest.status === 200) 
+if (request.Status === 200) 
 { 
 var counter= request.responseText; 
 var span = document.getElementById("count");
