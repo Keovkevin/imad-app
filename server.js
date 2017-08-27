@@ -22,9 +22,7 @@ var articles= {
     content:`<p>This is my first article for a webpage.This is my first article for a webpage.This is my first article for a webpage.This is my first article for a webpage.This is my first article for a webpage.This is my first article for a webpage.This is my first article for a webpage.This is my first article for a webpage.This is my first article for a webpage.This is my first article for a webpage.This is my first article for a webpage.</p>
         <p>This is my first article for a webpage.This is my first article for a webpage.This is my first article for a webpage.This is my first article for a
         webpage.This is my first article for a webpage.This is my first article for a webpage.This is my first article for a webpage.This is my first article for a
-        webpage.This is my first article for a webpage.This is my first article for a webpage.</p>`
-            
-},
+        webpage.This is my first article for a webpage.This is my first article for a webpage.</p>`},
   'article-two':{
     title:'Article Two | SHUBHAM SHEKHAR',
     heading:'Article two',
@@ -36,7 +34,7 @@ var articles= {
     heading:'Article three',
     date:'Aug 26,2017',
     content:`<p>This is my third article for a webpage.</p>`
-            }
+            },
 }; 
 function createTemplate (data) {
     var title=data.title;
