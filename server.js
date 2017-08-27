@@ -70,8 +70,7 @@ var htmlTemplate= `
          </div>
         </div>
     </body>
-</html>
-`;
+</html>`;
  return htmlTemplate;
 }
 
