@@ -25,12 +25,14 @@ var articles= {
         webpage.This is my first article for a webpage.This is my first article for a webpage.</p>`
             
 },
-  'article-two':{ title:'Article Two | SHUBHAM SHEKHAR',
+  'article-two':{
+    title:'Article Two | SHUBHAM SHEKHAR',
     heading:'Article two',
     date:'Aug 27,2017',
     content:`<p>This is my second article for a webpage.</p>`
             },
-  'article-three':{ title:'Article Third | SHUBHAM SHEKHAR',
+  'article-three':{
+    title:'Article Third | SHUBHAM SHEKHAR',
     heading:'Article three',
     date:'Aug 26,2017',
     content:`<p>This is my third article for a webpage.</p>`
@@ -64,7 +66,7 @@ var htmlTemplate= `
             ${date}
         </div>
         <div>
-          ${content}
+          //${content}
          </div>
         </div>
     </body>
