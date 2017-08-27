@@ -8,7 +8,7 @@ var config = {
     database:'shubhamshekhar089',
     host:'db.imad.hasura-app.io',
     port:'5432',
-    password:process.env.DB_PASSWORD
+    password: process.env.DB_PASSWORD
 };
 
 var app = express();
@@ -77,8 +77,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var Pool = new Pool(config);
-app.get('/test-db',function(req,res){
+var pool = new Pool(config);
+app.get('/test-db', function (req,res){
     //make a select request
     //return a response with the result
     pool.query('SELECT * FROM test',function(err,result){
