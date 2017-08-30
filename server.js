@@ -99,7 +99,7 @@ app.get('/articles/:articleName', function (req, res) {
     //article name will be article-one
     //articles[articleName]=={} content object for article-one
    
-   pool.query("SELECT * FROM articl WHERE title = " + req.params.articleName, function (err,result){
+   pool.query("SELECT * FROM article WHERE title = " + req.params.articleName, function (err,result){
        if (err) {
            res.status(500).send(err.toString());
        } else {
@@ -111,7 +111,6 @@ app.get('/articles/:articleName', function (req, res) {
            }
        }
    });
-   res.send(createTemplate(articleData));
 });
 
 app.get('/ui/style.css', function (req, res) {
